@@ -50,6 +50,7 @@ box-shadow: rgba(153,48,251,0.4) 0px 5px, rgba(153,48,251,0.3) 0px 10px, rgba(15
 .stacked-cards li.active {
     cursor: default;
     transition: 0.5s ease transform;
+    width: fit-content;
 
 }
 .stacked-cards li{
