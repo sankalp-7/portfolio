@@ -74,7 +74,12 @@ body{
     flex-shrink:2;
     justify-content:center;
 }
+
 @media (max-width:680px){
+  .calcu{
+    width: 75%;
+  }
+ 
     .formedia{
         position:fixed;
         background: rgba(64, 65, 63, 0.8);
@@ -104,7 +109,11 @@ body{
       gap:36px;
     }
     .menub{
-      display:inline-block;
+      visibility: visible;
+
+    }
+    .dis{
+      visibility: visible;
     }
 
   .nav-links{
@@ -520,8 +529,17 @@ h1::after {
 .menub{
   z-index: 999999;
   list-style: none;
+ 
  margin-left: 160px;
  
+}
+.dis{
+  display: block;
+}
+@media (min-width: 600px) {
+  .dis {
+    display: none; /* This is how it looks on desktop */
+  }
 }
 .menu-nav-btn{
   background-color: inherit;
@@ -553,22 +571,23 @@ width: 100%;
 
 .abt-photo{
   width:400px;
-  height:300px;
+  height: 400px;
   border-radius: 12px;
   box-shadow: 0px 4px 8px 0px rgba(0,0,0, 0.3);
 }
 .about-profile{
   display: flex;
-  flex:1 1 50%;
+  flex:1 1 40%;
   justify-content:center;
 }
 .about-text{
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-right: 20px;
   row-gap: 65px;
   flex-direction: column;
-  flex:1 1 50%;
+  flex:1 1 60%;
 
 }
 .resume-btn{
@@ -593,9 +612,15 @@ width: 100%;
   }
   .about-text{
     margin-left: 70px;
+    margin-top: 30px;
+    justify-content: flex-start;
   }
   .boxesContainer{
     flex-direction: column;
+  }
+  .abt-photo{
+    width: 100%;
+    height:auto;
   }
 }
 .about-ditch{
@@ -817,6 +842,7 @@ background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 }
 .footer{
   background-color: #485461;
+  position: fixed;
 background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
   width:100%;
   margin: 0;
@@ -853,7 +879,7 @@ background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 /* Footer left */
 
 .footer-distributed .footer-left{
-	width: 40%;
+	width: 38%;
 }
 
 /* The company logo */
@@ -998,6 +1024,7 @@ background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 
 	.footer-distributed{
 		font: bold 14px sans-serif;
+    width: 108%;
 	}
 
 	.footer-distributed .footer-left,
