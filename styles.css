@@ -25,7 +25,7 @@ html {
     
 }
 body{
-    height: 100vh;
+    height: 85vh;
    background-color:white;
 
     
@@ -79,6 +79,7 @@ body{
   .calcu{
     width: 75%;
   }
+ 
  
     .formedia{
         position:fixed;
@@ -540,6 +541,7 @@ h1::after {
   .dis {
     display: none; /* This is how it looks on desktop */
   }
+  
 }
 .menu-nav-btn{
   background-color: inherit;
@@ -571,7 +573,7 @@ width: 100%;
 
 .abt-photo{
   width:400px;
-  height: 400px;
+  height: 300px;
   border-radius: 12px;
   box-shadow: 0px 4px 8px 0px rgba(0,0,0, 0.3);
 }
@@ -579,13 +581,14 @@ width: 100%;
   display: flex;
   flex:1 1 40%;
   justify-content:center;
+  padding-top:70px;
 }
 .about-text{
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 20px;
-  row-gap: 65px;
+  row-gap: 60px;
   flex-direction: column;
   flex:1 1 60%;
 
@@ -1018,9 +1021,9 @@ background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 	margin-bottom: 5px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
 
-@media (max-width: 880px) {
+
+@media (max-width: 680px) {
 
 	.footer-distributed{
 		font: bold 14px sans-serif;
@@ -1053,4 +1056,131 @@ button:hover{
 }
 button:active{
   opacity: 0.6;
+}
+
+.letter-image {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  width: 200px;
+  height: 200px;
+  /* -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  cursor: pointer;
+}
+.animated-mail {
+  position: absolute;
+  height: 150px;
+  width: 300px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+}
+.animated-mail .body {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 200px;
+  border-color: transparent transparent rgb(209, 149, 249) transparent;
+  z-index: 2;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.animated-mail .top-fold {
+  position: absolute;
+  top: 50px;
+  width: 100px;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100px 0 100px;
+  -webkit-transform-origin: 50% 0%;
+  -webkit-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+  -moz-transform-origin: 50% 0%;
+  -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+  transform-origin: 50% 0%;
+  transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+  border-color: rgb(244, 228, 254) transparent transparent transparent;
+  z-index: 2;
+}
+.animated-mail .back-fold {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 100px;
+  background: rgb(239, 223, 249);
+  z-index: 0;
+}
+.animated-mail .left-fold {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 50px 100px;
+  border-color: transparent transparent transparent rgb(225, 191, 248);
+  z-index: 2;
+}
+.animated-mail .letter {
+  left: 20px;
+  bottom: 0px;
+  position: absolute;
+  width: 160px;
+  height: 60px;
+  background: white;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: 0.4s 0.2s;
+  -moz-transition: 0.4s 0.2s;
+  transition: 0.4s 0.2s;
+}
+.animated-mail .letter .letter-border {
+  height: 10px;
+  width: 100%;
+  background: repeating-linear-gradient(-45deg, rgb(153, 48, 251), rgb(153, 48, 251) 8px, transparent 8px, transparent 18px);
+}
+.animated-mail .letter .letter-title {
+  margin-top: 10px;
+  margin-left: 5px;
+  height: 10px;
+  width: 40%;
+  background: #ffffff;
+}
+.animated-mail .letter .letter-context {
+  margin-top: 10px;
+  margin-left: 5px;
+  height: 10px;
+  width: 20%;
+  background: #ffffff;
+}
+.animated-mail .letter .letter-stamp {
+  margin-top: 30px;
+  margin-left: 120px;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  background: rgb(153, 48, 251);
+  opacity: 0.3;
+}
+
+.letter-image:hover .animated-mail {
+  transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+}
+.letter-image:hover .animated-mail .top-fold {
+  transition: transform 0.4s, z-index 0.2s;
+  transform: rotateX(180deg);
+  -webkit-transition: transform 0.4s, z-index 0.2s;
+  -webkit-transform: rotateX(180deg);
+  -moz-transition: transform 0.4s, z-index 0.2s;
+  -moz-transform: rotateX(180deg);
+  z-index: 0;
+}
+.letter-image:hover .animated-mail .letter {
+  height: 180px;
+}
+.letter-image:hover .shadow {
+  width: 250px;
 }

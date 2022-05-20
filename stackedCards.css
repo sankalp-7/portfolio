@@ -35,14 +35,14 @@ box-shadow: rgba(153,48,251,0.4) 0px 5px, rgba(153,48,251,0.3) 0px 10px, rgba(15
     transition: 1.5s ease transform;
 }
 
-/* .stacked-cards li:after {
+.stacked-cards li:after {
     bottom: 0;
     content: "";
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
-} */
+}
 .stacked-cards li.active:after {
     display: none;
 }
